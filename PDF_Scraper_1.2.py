@@ -17,13 +17,13 @@ def get_fields(file):
         widgets = page.widgets()
         for widget in widgets:
             field_name = widget.field_name
-            field_value = widget.field_value
+            field_value = widget.field_value #Joyval
             if field_name in field_data:
                 field_data[field_name].append(field_value)
             else:
                 field_data[field_name] = [field_value]
 
-    # make th DataFrame
+    # make the DataFrame
     df = pd.DataFrame(field_data)
 
     # Replace non-filled values with NaN
@@ -35,26 +35,26 @@ def get_input_file():
     root = tk.Tk()
     root.withdraw()  # Hide the main window
 
-    # Open a file dialog to select the input PDF file
+    # Select the input PDF file
     input_file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
     return input_file_path
 
 def get_output_directory():
     root = tk.Tk()
-    root.withdraw()  # Hide the main window
+    root.withdraw() 
 
     # Open a file dialog to select the output directory
     output_directory = filedialog.askdirectory()
     return output_directory
 
 def write_to_csv(df, output_path, filename):
-    # Construct the full output file path
+    # Full outputs
     full_path = f"{output_path}/{filename}.csv"
 
     # Write DataFrame to CSV
     df.to_csv(full_path, index=False)
 
-# Main program
+# Main idea
 pdf_form_name = input("Specify which of the following: CFOG, MSRS_GSAP, NFOGQ, PRO_PAC, PAS, as an input you are trying to convert")
 
 input_file_path = get_input_file()
