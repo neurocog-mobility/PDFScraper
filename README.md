@@ -7,4 +7,4 @@ NeuroCog versions of :C-FOG, PRO_PAC, MSRS_GSAP (both in the same PDF), N_FOGQ, 
 It can deal with any other fillable PDFs as well given they have proper titles for each of their forms.
 
 
-Use: run the script in python, and provide it the PDF input file in the first input window. After a second input window will open where you specify where the document is saved to.
+Use: run the script in python, and provide it the PDF input file in the first input window. After, a second input window will open where you specify where the document is saved to.
